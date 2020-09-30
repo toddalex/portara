@@ -1,24 +1,61 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.ts"
+  "name": "portara",
+  "version": "1.0.8",
+  "description": "Apollo GraphQL rate limiter, throttler, and ",
+  "main": "portaraSchemaDirective.js",
+  "bin": "portaraSchemaDirective.js",
+  "files": [
+    "package.json",
+    "/examples",
+    "README.md",
+    "LICENSE",
+    "graphqlQueries.js",
+    "interfaces.js",
+    "rateLimiter.js",
+    "throttler.js",
+    "timeFrameMultiplier.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oslabs-beta/portara.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon server.ts",
+    "test": "jest --forceExit --detectOpenHandles"
+  },
+  "keywords": [
+    "rate limiter",
+    "rate-limiter",
+    "apollo",
+    "graphql",
+    "redis",
+    "throttler",
+    "throttle"
+  ],
+  "author": "portara-labs",
+  "license": "MIT",
   "dependencies": {
-    "@types/node": "^13.13.4",
-    "apollo-server": "^2.13.0",
-    "apollo-server-express": "^2.13.0",
-    "dotgitignore": "^2.1.0",
-    "express": "^4.17.1",
+    "@types/node": "^14.0.5",
+    "apollo-server": "^2.14.2",
+    "async-redis": "^1.1.7",
     "graphql": "^15.0.0",
-    "redis": "^3.0.2",
+    "kikstart-graphql-client": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^25.5.1",
+    "redis-mock": "^0.49.0",
+    "ts-jest": "^25.5.1",
     "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
-  }
+    "typescript": "^3.8.3",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.1"
+  },
+  "homepage": "https://github.com/oslabs-beta/portara/blob/staging/README.md"
 }
